@@ -1,0 +1,20 @@
+@import "../../styles/variables.scss";
+
+.GistFile {
+    margin: 1em 0;
+
+    &__Name {
+        color: $darkgray-color;
+        padding-bottom: 0.5em;
+
+        @media screen and (max-width: $max-mobile-screen-width) {
+            padding: 0 0.5rem;
+        }
+    }
+
+    &__Content {
+        white-space: pre-wrap;
+        word-break: break-all;
+        font-family: monospace;
+    }
+}

@@ -1,0 +1,113 @@
+@import '../styles/variables.scss';
+
+$leftmenu-width: 12rem;
+
+.App {
+    max-width: 1600px;
+    box-sizing: border-box;
+
+
+    @media screen and (min-width: $min-desktop-screen-width) {
+        padding: 0 1rem;
+    }
+
+    &__MobileHeader {
+        display: flex;
+        font-size: 1.2rem;
+        padding: 0.75rem 0.5rem 0.25rem;
+        line-height: 1.5rem;
+        vertical-align: middle;
+
+        @media screen and (min-width: $min-desktop-screen-width) {
+            display: none;
+        }
+    }
+
+    &__MobileMenuSwitch {
+        @media screen and (min-width: $min-desktop-screen-width) {
+            display: none;
+        }
+
+        padding: 2px;
+        background: none;
+        border: none;
+        padding-right: 0.5rem;
+        margin-right: 1rem;
+
+        &.active {
+            color: $active-color;
+        }
+    }
+
+    &__twitter_link {
+        color: $darkgray-color;
+        margin: 0 0.25rem;
+        padding: 0 0.25rem;
+
+        &:hover {
+            color: $twitter-link-color;
+        }
+    }
+
+    &__github_link {
+        color: $darkgray-color;
+        margin: 0 0.25rem;
+        padding: 0 0.25rem;
+
+        &:hover {
+            color: $github-link-color;
+        }
+    }
+
+    &__body {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+    }
+
+    &__contents {
+        flex-grow: 1;
+
+        // might be hindden only on mobile
+        &.hidden {
+            @media screen and (max-width: $max-mobile-screen-width) {
+                display: none;
+            }
+        }
+    }
+
+    &__menu {
+        @media screen and (max-width: $max-mobile-screen-width) {
+            display: none;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 3rem;
+            background: #fafafa;
+            overflow: auto;
+            z-index: 1000;
+            padding: 0.5rem 1rem 2rem;
+
+            &.visible {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: $min-desktop-screen-width) {
+            flex: 0 0 auto;
+            flex-basis: $leftmenu-width;
+            max-width: $leftmenu-width;
+            box-sizing: border-box;
+            padding-top: 1rem;
+            padding-right: 2rem;
+            padding-left: 0.25rem;
+        }
+    }
+}
+
+.header_spring {
+    flex-grow: 1;
+}

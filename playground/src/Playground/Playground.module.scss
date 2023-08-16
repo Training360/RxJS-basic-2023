@@ -1,0 +1,41 @@
+@import "../styles/variables.scss";
+
+.Playground {
+    display: flex;
+
+    @media screen and (min-width: $min-desktop-screen-width) {
+        width: 100%;
+
+        &__editor{
+            max-height: 90vh;
+            overflow: auto;
+
+            flex: 0 0 auto;
+            flex-basis: 50%;
+            max-width: 450px;
+        }
+
+        &__chart{
+            flex: 0 0 auto;
+            flex-basis: 50%;
+            flex-grow: 1;
+        }
+    }
+
+    @media screen and (max-width: $max-mobile-screen-width) {
+        width: 100%;
+        box-sizing: border-box;
+        flex-direction: column-reverse;
+
+        &__editor{
+            // adaptive SSR editor width on mobile
+            // compensating 1rem side padding on .PageBlock
+            max-width: 94vw;
+            max-width: calc(100vw - 1rem);
+        }
+
+        &__chart{
+            margin-top: 1rem;
+        }
+    }
+}

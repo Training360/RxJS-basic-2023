@@ -1,0 +1,7 @@
+@import './variables.scss';
+
+.DangerousContentWidth {
+    @media screen and (max-width: $max-mobile-screen-width) {
+        word-break: break-all;
+    }
+}

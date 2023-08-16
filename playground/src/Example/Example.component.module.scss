@@ -1,0 +1,71 @@
+@import "../styles/variables.scss";
+
+.ExampleComponent{
+    // a hack to force block to include inner marging
+    border-top:1px solid transparent;
+
+    &__FileEntry {
+        margin-bottom: 1rem;
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+
+    // reflecting same style of pageBlock
+    // DRY violation
+    @media screen and (max-width: $max-mobile-screen-width) {
+        padding: 0 0.5rem 1rem;
+        display: block;
+    }
+}
+
+.controls {
+    line-height: 2rem;
+    vertical-align: baseline;
+    font-size: 24px;
+
+    @media screen and (max-width: $max-mobile-screen-width) {
+        display: none;
+    }
+}
+
+.control {
+    &__docs, &__edit {
+        margin-left: 8px;
+        color: $gray-color;
+
+        &:hover {
+            color: $active-color;
+        }
+    }
+}
+
+.spring {
+    flex-grow: 1;
+}
+
+.share {
+    line-height: 2rem;
+    vertical-align: baseline;
+    font-size: 28px;
+    color: $lightgray-color;
+
+    @media screen and (max-width: $max-mobile-screen-width) {
+        display: block;
+        margin-top: -0.5rem;
+    }
+
+    &__twitter, &__linkedin, &__email {
+        margin-left: 8px;
+    }
+
+    &__twitter {
+        color: $twitter-link-color;
+    }
+
+    &__linkedin {
+        color: $linkedin-link-color;
+    }
+}

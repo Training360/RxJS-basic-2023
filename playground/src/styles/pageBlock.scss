@@ -1,0 +1,97 @@
+@import "./variables.scss";
+
+.PageBlock {
+    display: block;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+	color: #111;
+
+	p {
+        line-height: 1.5rem;
+        padding: 0.5rem 0;
+        margin: 0;
+    }
+    
+    hr {
+        border: none;
+        height: 1rem;
+
+        &::before {
+            content: '• • •';
+            display: block;
+            width: 5rem;
+            margin: auto;
+            color: #ccc;
+        }
+    }
+
+    a {
+        color: $active-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    blockquote {
+        display: block;
+        color: #16202b;
+        padding: 0 0 0 1rem;
+        border-color: #4fa877;
+        border-style: solid;
+        border-width: 1px;
+        border-left-width: 4px;
+        background: #effff9;
+        margin: 2px 0;
+        margin-bottom: 0.5rem;
+    }
+
+    code:not(.language-js) {
+        padding: 0 5px;
+        white-space: nowrap;
+        font-family: Menlo, "Ubuntu Mono", Consolas, source-code-pro, monospace;
+        color: #333;
+        background-color: #eff0f1;
+        padding: 1px 2px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+
+        @media screen and (max-width: $max-mobile-screen-width) {
+          white-space: normal;
+        }
+    }
+
+    a > code:not(.language-js) {
+        color: inherit;
+    }
+
+    pre > code:not(.language-js) {
+        display: block;
+        padding: 1rem;
+    }
+
+    img {
+        max-width: 100%;
+	}
+
+	h1 {
+		color: #223;
+	}
+
+	h2 {
+		color: #334;
+		padding-top: 1rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 1px solid #ccc;
+	}
+
+	h3 {
+		color: #445;
+	}
+
+    @media screen and (max-width: $max-mobile-screen-width) {
+        padding: 0 0.5rem;
+    }
+}
