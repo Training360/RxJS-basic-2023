@@ -10,122 +10,139 @@ export const library = {
     version: LIB_VERSION,
     description: 'Reactive Extensions For JavaScript',
     groups:
-        [   { name: 'My packages'
-            , items:
-                [ 'autorun'
-                , 'proxy'
-                , 'query'
-                ]
-            }
-        ,   { name: 'Observable'
-            , items:
-                [ 'constructor'
-                , 'pipe'
-                , 'forEach'
-                , 'toPromise'
-                , 'subscribe'
-                ]
-            }
-
-        ,   { name: 'Creation'
-            , items:
-                [ 'of'
-                , 'from'
-                , 'fromPromise'
-                , 'interval'
-                , 'timer'
-                , 'defer'
-                , 'range'
-                , 'iif'
-                , 'never'
-                , 'empty'
-                ]
-            }
-
-        ,   { name: 'Filtering'
-            , items:
-                [ 'filter'
-                , 'find'
-				, 'first'
-				, 'take'
-				, 'single'
-				, 'takeUntil'
-				, 'takeWhile'
-                , 'auditTime'
-                , 'debounceTime'
-                , 'throttleTime'
-                , 'sampleTime'
-                , 'windowToggle'
-                ]
+        [
+            // { name: 'My packages'
+            // , items:
+            //     [ 'autorun'
+            //     , 'proxy'
+            //     , 'query'
+            //     ]
+            // },
+            {
+                name: 'Observable'
+                , items:
+                    ['constructor'
+                        , 'pipe'
+                        , 'forEach'
+                        , 'toPromise'
+                        , 'subscribe'
+                    ]
+            },
+            {
+                name: 'Subject'
+                , items:
+                    ['subject'
+                        , 'asyncsubject'
+                        , 'behaviorsubject'
+                        , 'ReplaySubject'
+                    ]
+            },
+            {
+                name: 'Creation'
+                , items:
+                    ['of'
+                        , 'from'
+                        , 'fromPromise'
+                        , 'interval'
+                        , 'timer'
+                        , 'defer'
+                        , 'range'
+                        , 'iif'
+                        , 'never'
+                        , 'empty'
+                    ]
             }
 
-        ,   { name: 'Combination'
-            , items:
-                [ 'zip'
-                , 'forkJoin'
-                , 'race'
-                , 'combineLatest'
-                , 'withLatestFrom'
-                , 'startWith'
-                ]
+            , {
+                name: 'Filtering'
+                , items:
+                    ['filter'
+                        , 'find'
+                        , 'first'
+                        , 'take'
+                        , 'single'
+                        , 'takeUntil'
+                        , 'takeWhile'
+                        , 'auditTime'
+                        , 'debounceTime'
+                        , 'throttleTime'
+                        , 'sampleTime'
+                        , 'windowToggle'
+                    ]
             }
 
-        ,   { name: 'Error handling'
-            , items:
-                [ 'throwError'
-                , 'catch'
-                , 'retry'
-                , 'retryWhen'
-                , 'onErrorResumeNext'
-                ]
+            , {
+                name: 'Combination'
+                , items:
+                    ['zip'
+                        , 'forkJoin'
+                        , 'race'
+                        , 'combineLatest'
+                        , 'withLatestFrom'
+                        , 'startWith'
+                    ]
             }
 
-        ,   { name: 'Transformation'
-            , items:
-                [ 'map'
-                , 'pluck'
-                , 'buffer'
-                , 'mergeMap'
-                , 'switchMap'
-                , 'exhaustMap'
-                , 'concatMap'
-                , 'expand'
-                , 'toArray'
-                , 'windowWhen'
-                ]
+            , {
+                name: 'Error handling'
+                , items:
+                    ['throwError'
+                        , 'catch'
+                        , 'retry'
+                        , 'retryWhen'
+                        , 'onErrorResumeNext'
+                    ]
             }
 
-        ,   { name: 'Multicasting'
-            , items:
-                [ 'share'
-                , 'shareReplay'
-                ]
+            , {
+                name: 'Transformation'
+                , items:
+                    ['map'
+                        , 'pluck'
+                        , 'buffer'
+                        , 'mergeMap'
+                        , 'switchMap'
+                        , 'exhaustMap'
+                        , 'concatMap'
+                        , 'expand'
+                        , 'toArray'
+                        , 'windowWhen'
+                    ]
             }
 
-        ,   { name: 'Utility'
-            , items:
-                [ 'tap'
-                , 'finalize'
-                , 'timeInterval'
-                , 'defaultIfEmpty'
-                , 'delay'
-                , 'delayWhen'
-                , 'dematerialize'
-                , 'repeat'
-                , 'timeout'
-                ]
+            , {
+                name: 'Multicasting'
+                , items:
+                    ['share'
+                        , 'shareReplay'
+                    ]
             }
 
-        // ,   { name: '⚠️ Experimental'
-        //     , items:
-        //         [ 'js-pipeline'
-        //         ]
-        //     }
+            , {
+                name: 'Utility'
+                , items:
+                    ['tap'
+                        , 'finalize'
+                        , 'timeInterval'
+                        , 'defaultIfEmpty'
+                        , 'delay'
+                        , 'delayWhen'
+                        , 'dematerialize'
+                        , 'repeat'
+                        , 'timeout'
+                    ]
+            }
 
-        // ,   { name: 'Recipes'
-        //     , items:
-        //         [ 'pausable-buffer'
-        //         ]
-        //     }
+            // ,   { name: '⚠️ Experimental'
+            //     , items:
+            //         [ 'js-pipeline'
+            //         ]
+            //     }
+
+            // ,   { name: 'Recipes'
+            //     , items:
+            //         [ 'pausable-buffer'
+            //         ]
+            //     }
         ]
 };

@@ -15,7 +15,7 @@ export const HomePage = () =>
 
         <div className="PageBlock">
             <h1>
-                ThinkRx — Instant marble diagrams for <Link href="/[libId]/" as="/rxjs/"><a>RxJS</a></Link>, <Link href="/[libId]/" as="/baconjs/"><a>Bacon.js</a></Link>, <Link href="/[libId]/" as="/kefir/"><a>Kefir.js</a></Link> reactive programming libraries with a bunch of examples 
+                RxJS Playground
             </h1>
 
             <blockquote>
@@ -26,7 +26,7 @@ export const HomePage = () =>
 
             <Playground code={awesomeRxjsExample} />
 
-            <h2>🔍 Start exploring with these examples</h2>
+            {/* <h2>🔍 Start exploring with these examples</h2>
 
             <ul>
                 <li><b><Link href="/[libId]/" as="/rxjs/"><a>RxJS</a></Link></b>
@@ -107,7 +107,7 @@ export const HomePage = () =>
 
             <p>
                 <ExternalLink href={ 'http://rxmarbles.com/' } text={ 'rxmarbles.com' } />, <ExternalLink href={ 'https://www.learnrxjs.io' } text={'learnrxjs.io'}/> and great talks by <ExternalLink href={ 'http://worrydream.com/' } text={'Bret Victor'} />
-            </p>
+            </p> */}
         </div>
 
     </div>

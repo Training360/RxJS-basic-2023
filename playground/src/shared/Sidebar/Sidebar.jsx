@@ -15,7 +15,10 @@ export function Sidebar() {
             <header className={style.desktopSideMenuHeader}>
                 <Logo />
 
-                <div className={style.social}>
+                
+            </header>
+            <MenuComponent />
+            <div className={style.social}>
                     <ExternalLink
                         className={style.githubstar}
                         title="Support the project on GitHub"
@@ -67,8 +70,6 @@ export function Sidebar() {
                         /></ExternalLink>
 
                 </div>
-            </header>
-            <MenuComponent />
         </div>
     );
 }
