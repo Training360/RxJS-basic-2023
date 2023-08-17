@@ -4,6 +4,7 @@
 - `cd playground`
 - `npm i --legacy-peer-deps`
 - `npm run dev`
+- Open: `http://localhost:3000/`
 
 ## Examples
 The examples are the examples sub-directory.
