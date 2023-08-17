@@ -31,9 +31,9 @@ export const library = {
             {
                 name: 'Subject'
                 , items:
-                    ['subject'
-                        , 'asyncsubject'
-                        , 'behaviorsubject'
+                    ['Subject'
+                        , 'AsyncSubject'
+                        , 'BehaviorSubject'
                         , 'ReplaySubject'
                     ]
             },
@@ -43,6 +43,7 @@ export const library = {
                     ['of'
                         , 'from'
                         , 'fromPromise'
+                        , 'fromEvent'
                         , 'interval'
                         , 'timer'
                         , 'defer'

@@ -1,6 +1,6 @@
 <!--
 name:		
-title:		subject
+title:		Subject
 pageTitle:	subject — RxJS Observable method example + marble diagram
 desc:		subject is a special type of observables
 docsUrl:	https://www.learnrxjs.io/learn-rxjs/subjects/subject

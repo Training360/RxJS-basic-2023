@@ -1,6 +1,6 @@
 <!--
 name:		
-title:		behaviorsubject
+title:		BehaviorSubject
 pageTitle:	behaviorsubject — RxJS Observable method example + marble diagram
 desc:		behaviorsubject requires an initial value and emits the current value to new subscribers
 docsUrl:	https://rxjs.dev/guide/subject#behaviorsubject

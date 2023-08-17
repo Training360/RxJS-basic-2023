@@ -12,48 +12,22 @@ docsUrl:	https://rxjs.dev/api/operators/mergeMap
 
 ```js
 const { rxObserver, palette } = require('api/v0.3');
-const { from, timer, pipe } = require('rxjs');
-const { zip, take, map, mergeMap, delayWhen } = require('rxjs/operators');
+const { from, of } = require('rxjs');
+const { mergeMap } = require('rxjs/operators');
 
+// helper to create promise
+const myPromise = val =>
+  new Promise(resolve => resolve(val));
 
-// our source$ will emit values at 5ms, 10ms, 20ms
-const source$ = fromDelayed([ 5, 10, 20 ]).pipe(
-    zip(from(palette), Marble) // colorize each item
-  );
+// emit 'Hello'
+const source$ = of( 
+    Math.floor(Math.random() * 10) 
+);
 
-const mergeMap$ = source$.pipe(
-    mergeMap(x => timer(0, 3).pipe(
-        take(3),
-        colorize(x.color))  // colorize as source$ value
-      )
-  );
-
-// visualization
-source$.subscribe(rxObserver('source$'));
-mergeMap$.subscribe(rxObserver('mergeMap( timer(0, 3).take(3) )'));
-
-
-// helpers
-function colorize(color) {
-  return pipe(
-    map(y => Marble(y, color))
-  );
-}
-
-// creates a colored Marble
-function Marble(value,color) {
-  return {
-    valueOf: ()=>value
-    , color
-  };
-}
-
-// like .from, but items are delayed by their value
-function fromDelayed (arr) {
-  return from(arr).pipe(
-      delayWhen(x=>timer(x))
-    );
-}
+// map to promise and emit result
+source$.pipe(
+    mergeMap(val => myPromise(val))
+).subscribe(rxObserver());
 
 ```
 
